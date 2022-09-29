@@ -14,9 +14,6 @@ class ColumbiaStudentResource:
         # usr = os.environ.get("DBUSER")
         # pw = os.environ.get("DBPW")
         # h = os.environ.get("DBHOST")
-#         h = "localhost"
-#         usr = 'root'
-#         pw = 'RebeccaW9887'
         h = "database-1.cbkjdr0egrir.us-east-2.rds.amazonaws.com"
         usr = 'admin'
         pw = '19980807'
