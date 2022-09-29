@@ -14,9 +14,12 @@ class ColumbiaStudentResource:
         # usr = os.environ.get("DBUSER")
         # pw = os.environ.get("DBPW")
         # h = os.environ.get("DBHOST")
-        h = "localhost"
-        usr = 'root'
-        pw = 'RebeccaW9887'
+#         h = "localhost"
+#         usr = 'root'
+#         pw = 'RebeccaW9887'
+        h = "database-1.cbkjdr0egrir.us-east-2.rds.amazonaws.com"
+        usr = 'admin'
+        pw = '19980807'
 
         conn = pymysql.connect(
             user=usr,
@@ -29,7 +32,7 @@ class ColumbiaStudentResource:
 
     @staticmethod
     def get_by_key(key):
-        sql = "SELECT * FROM f22_databases.columbia_student where uni=%s";
+        sql = "SELECT * FROM f22_database.columbia_student where uni=%s";
         conn = ColumbiaStudentResource._get_connection()
         cur = conn.cursor()
         res = cur.execute(sql, args=key)
